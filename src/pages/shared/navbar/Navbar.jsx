@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo/navlogo.png";
 
 const Navbar = () => {
   const navItems = (
@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to={"/add-a-toy"}>Add A Toys</Link>
       </li>
       <li>
-        <Link to={"/Blogs"}>Blogs</Link>
+        <Link to={"/blog"}>Blog</Link>
       </li>
     </>
   );
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className=" rounded-lg p-2 hover:bg-slate-700 "
+          className=" rounded-lg p-2 hover:dark:bg-gray-900 "
         >
           <div className="flex items-center md:gap-4 gap-2">
             <img
@@ -62,13 +62,13 @@ const Navbar = () => {
               src={logo}
               alt="Toy Logo"
             />
-            <span className="md:text-2xl md:w-44 w-36 uppercase">
+            <span className="md:text-2xl md:w-44 w-40 uppercase font-bold ">
               Toy Car Zone
             </span>
           </div>
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
