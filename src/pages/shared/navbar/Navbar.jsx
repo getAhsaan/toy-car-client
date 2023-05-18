@@ -9,13 +9,13 @@ const Navbar = () => {
         <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <Link to={"/all-toys"}>All Toys</Link>
+        <Link to={"/"}>All Toys</Link>
       </li>
       <li>
-        <Link to={"/my-toys"}>My Toys</Link>
+        <Link to={"/"}>My Toys</Link>
       </li>
       <li>
-        <Link to={"/add-a-toy"}>Add A Toys</Link>
+        <Link to={"/"}>Add A Toys</Link>
       </li>
       <li>
         <Link to={"/blog"}>Blog</Link>
@@ -62,14 +62,14 @@ const Navbar = () => {
               src={logo}
               alt="Toy Logo"
             />
-            <span className="md:text-2xl md:w-44 w-40 uppercase font-bold ">
+            <span className="md:text-2xl text-xl md:w-44 w-36 uppercase font-bold ">
               Toy Car Zone
             </span>
           </div>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
-        <ul className="menu menu-horizontal px-1">{navItems}</ul>
+        <ul className="menu menu-horizontal px-1 uppercase text-xl">{navItems}</ul>
       </div>
       <div className="navbar-end">
         <button className="btn btn-outline btn-secondary btn-sm md:btn-md">

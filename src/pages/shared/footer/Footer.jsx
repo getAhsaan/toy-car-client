@@ -9,17 +9,17 @@ const Footer = () => {
       <footer className="my-8 rounded-xl bg-neutral-100 text-center text-neutral-600 dark:bg-gray-900 dark:text-neutral-200 lg:text-left">
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
           <div className="mr-12 hidden lg:block">
-            <span>Get connected with us on social networks:</span>
+            <span className="text-xl">Get connected with us on social networks:</span>
           </div>
           {/* Social network icons container  */}
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <a
               href="#!"
               className="mr-6 text-neutral-600 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -32,7 +32,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -45,7 +45,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-8 w-8"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -62,7 +62,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -75,7 +75,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -88,7 +88,7 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -108,7 +108,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="mr-3 h-4 w-4"
+                  className="mr-3 h-6 w-6"
                 >
                   <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
                 </svg>
@@ -118,7 +118,7 @@ const Footer = () => {
                   className="rounded-md"
                 />
               </h6>
-              <p className="text-sm p-2 ps-3 text-justify pe-0">
+              <p className="text-xl p-2 ps-3 text-justify pe-0">
                 Drive your imagination with our captivating toy cars. Unleash
                 the thrill of racing, collecting, and exploring with our
                 handpicked selection. Let the adventure begin at Toy Car Zone.
@@ -126,13 +126,13 @@ const Footer = () => {
             </div>
             {/* Products section */}
             <div className="">
-              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">
                 Products
               </h6>
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Toy Truck
                 </a>
@@ -140,7 +140,7 @@ const Footer = () => {
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Toy Bus
                 </a>
@@ -148,7 +148,7 @@ const Footer = () => {
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Toy Cycle
                 </a>
@@ -156,7 +156,7 @@ const Footer = () => {
               <p>
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Toy Train
                 </a>
@@ -164,13 +164,13 @@ const Footer = () => {
             </div>
             {/* Useful links section */}
             <div className="">
-              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">
                 Useful links
               </h6>
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Pricing
                 </a>
@@ -178,7 +178,7 @@ const Footer = () => {
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Settings
                 </a>
@@ -186,7 +186,7 @@ const Footer = () => {
               <p className="mb-4">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Orders
                 </a>
@@ -194,7 +194,7 @@ const Footer = () => {
               <p>
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-neutral-600 dark:text-neutral-200 uppercase"
                 >
                   Help
                 </a>
@@ -202,10 +202,10 @@ const Footer = () => {
             </div>
             {/* Contact section */}
             <div>
-              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-xl">
                 Contact
               </h6>
-              <p className="mb-4 flex items-center justify-center md:justify-start">
+              <p className="mb-4 flex items-center justify-center md:justify-start uppercase">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -217,7 +217,7 @@ const Footer = () => {
                 </svg>
                 New York, NY 10012, US
               </p>
-              <p className="mb-4 flex items-center justify-center md:justify-start">
+              <p className="mb-4 flex items-center justify-center md:justify-start text-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -265,10 +265,10 @@ const Footer = () => {
 
         {/* Copyright section */}
         <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-800">
-          <span>© 2023 Copyright: </span>
+          <span className="text-xl">© 2023 Copyright: </span>
           <Link
             to={"/"}
-            className="font-semibold  text-orange-300"
+            className="font-semibold  text-orange-300 text-xl"
             href="https://toy-car-zone.netlify.app/"
           >
             Toy Car Zone

@@ -5,13 +5,13 @@ const Blog = () => {
     <>
       <section class="bg-white dark:bg-gray-900 rounded-xl my-8">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-8 text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Frequently asked questions
           </h2>
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 text-4xl font-medium text-gray-900 dark:text-white">
                   <svg
                     class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
@@ -28,7 +28,7 @@ const Blog = () => {
                   and where should we store them on the client-side?
                 </h3>
                 <div class="text-gray-500 dark:text-gray-400">
-                <p><span className="text-amber-600">Access Token:</span> An access token is a credential that represents the authorization granted to a user or client application to access specific resources or perform certain actions. It is usually a short-lived token with a limited lifespan. The access token is presented by the client application to the server or API it wishes to access to prove its identity and permissions. The server validates the token and allows or denies access based on its validity and the associated permissions. </p>
+                <p className="text-2xl"><span className="text-amber-600">Access Token:</span> An access token is a credential that represents the authorization granted to a user or client application to access specific resources or perform certain actions. It is usually a short-lived token with a limited lifespan. The access token is presented by the client application to the server or API it wishes to access to prove its identity and permissions. The server validates the token and allows or denies access based on its validity and the associated permissions. </p>
                 <br /> 
                 <p><span className="text-amber-600">Refresh Token:</span> A refresh token is a long-lived token used to obtain a new access token when the current access token expires. Unlike access tokens, refresh tokens are typically long-lasting and can be used to request new access tokens for an extended period. They are securely stored on the client-side and are used to maintain persistent authentication without requiring the user to repeatedly enter their credentials.</p>
                 <br />
