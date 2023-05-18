@@ -1,5 +1,4 @@
 import React from "react";
-import { Disclosure } from "@headlessui/react";
 
 const Blog = () => {
   return (
