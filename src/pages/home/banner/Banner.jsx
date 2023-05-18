@@ -22,7 +22,7 @@ const Banner = () => {
             </p>
             <div className="inline-flex items-center justify-center w-full">
               <hr className="w-64 h-1 my-8  border-0 rounded dark:bg-orange-300" />
-              <div className="absolute px-4 -translate-x-1/2 dark:bg-slate-900 left-1/2 font-bold text-xl md:text-2xl rounded-lg p-2">
+              <div className="absolute px-4 -translate-x-1/2 dark:bg-slate-900 left-1/2 font-bold text-xl md:text-2xl rounded-lg p-2 border cursor-pointer">
                 Let's Explore
               </div>
             </div>

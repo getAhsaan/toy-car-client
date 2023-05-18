@@ -1,24 +1,65 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/navlogo.png";
+import { useAuth } from "../../../hooks/hook";
+import { Tooltip } from "react-tooltip";
+import Button from "../../../components/Button";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+
+  // handle user log out
+  const handleUserLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("log out successful");
+        toast.success("logout successful");
+      })
+      .catch((err) => console.log(err));
+  };
+
   const navItems = (
     <>
       <li>
-        <Link to={"/"} className="text-xl">Home</Link>
+        <NavLink
+          to={"/"}
+          className="text-xl"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to={"/"} className="text-xl">All Toys</Link>
+        <NavLink
+          to={"/al-toys"}
+          className="text-xl"
+        >
+          All Toys
+        </NavLink>
       </li>
       <li>
-        <Link to={"/"} className="text-xl">My Toys</Link>
+        <NavLink
+          to={"/my-toys"}
+          className="text-xl"
+        >
+          My Toys
+        </NavLink>
       </li>
       <li>
-        <Link to={"/"} className="text-xl">Add A Toys</Link>
+        <NavLink
+          to={"/add-a-toys"}
+          className="text-xl"
+        >
+          Add A Toys
+        </NavLink>
       </li>
       <li>
-        <Link to={"/blog"} className="text-xl">Blog</Link>
+        <NavLink
+          to={"/blog"}
+          className="text-xl"
+        >
+          Blog
+        </NavLink>
       </li>
     </>
   );
@@ -69,12 +110,37 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
-        <ul className="menu menu-horizontal px-1 uppercase text-xl">{navItems}</ul>
+        <ul className="menu menu-horizontal px-1 uppercase text-xl">
+          {navItems}
+        </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline btn-secondary btn-sm md:btn-md">
-          Login
-        </button>
+      {user ? (
+          <>
+            {user?.displayName && (
+              <Tooltip
+                anchorSelect=".show-user-name"
+                place="left"
+              >
+                {user?.displayName}
+              </Tooltip>
+            )}
+            <label className="btn btn-ghost btn-circle avatar mr-2">
+              <div className="w-10 rounded-full">
+                <img
+                  className="show-user-name hidden lg:block"
+                  src={user?.photoURL}
+                  place="left"
+                />
+              </div>
+            </label>
+            <Button handleClick={handleUserLogOut}>Logout</Button>
+          </>
+        ) : (
+          <Link to="/login">
+            <Button>Login</Button>
+          </Link>
+        )}
       </div>
     </div>
   );
