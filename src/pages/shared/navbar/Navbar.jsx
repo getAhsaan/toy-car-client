@@ -6,19 +6,19 @@ const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <Link to={"/"} className="text-xl">Home</Link>
       </li>
       <li>
-        <Link to={"/"}>All Toys</Link>
+        <Link to={"/"} className="text-xl">All Toys</Link>
       </li>
       <li>
-        <Link to={"/"}>My Toys</Link>
+        <Link to={"/"} className="text-xl">My Toys</Link>
       </li>
       <li>
-        <Link to={"/"}>Add A Toys</Link>
+        <Link to={"/"} className="text-xl">Add A Toys</Link>
       </li>
       <li>
-        <Link to={"/blog"}>Blog</Link>
+        <Link to={"/blog"} className="text-xl">Blog</Link>
       </li>
     </>
   );
@@ -32,7 +32,7 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className=" rounded-lg p-2 hover:dark:bg-gray-900 "
+          className=" rounded-lg p-2 hover:dark:bg-gray-800"
         >
           <div className="flex items-center md:gap-4 gap-2">
             <img
@@ -62,7 +62,7 @@ const Navbar = () => {
               src={logo}
               alt="Toy Logo"
             />
-            <span className="md:text-2xl text-xl md:w-44 w-36 uppercase font-bold ">
+            <span className="md:text-3xl text-2xl md:w-44 w-40 uppercase font-bold">
               Toy Car Zone
             </span>
           </div>
