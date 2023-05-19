@@ -8,7 +8,7 @@ const Collection = () => {
         {" "}
         <span className="border p-1 rounded-md">Our Collection</span>{" "}
       </p>
-      <h2 className="text-4xl text-center w-40 mx-auto border-b-2">
+      <h2 className="text-4xl text-center w-44 mx-auto border-b-2">
         Shop By Age
       </h2>
       <div className="my-8 dark:bg-slate-900 p-4 rounded-xl py-8">

@@ -3,7 +3,7 @@ import React from 'react';
 const AllToys = () => {
     return (
         <div>
-         <h2 className="text-5xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+         <h2 className="md:text-5xl text-3xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         All Toys
       </h2>
             <div className="overflow-x-auto">

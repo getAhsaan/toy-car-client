@@ -6,11 +6,11 @@ import "../shopByCategory/ShopByCategory.css"
 const ShopByCategory = () => {
   return (
     <div className="my-8">
-      <h2 className="text-5xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-3xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         Shop By Category
       </h2>
       <Tabs>
-        <TabList className="w-1/2 mx-auto my-8 flex justify-center gap-8">
+        <TabList className="w-1/2 mx-auto my-8 flex justify-center md:gap-8 gap-4">
           <Tab>
             <span className="text-2xl">Bus Toys</span>
           </Tab>

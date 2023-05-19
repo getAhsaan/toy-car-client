@@ -3,6 +3,9 @@ import React from "react";
 const Blog = () => {
   return (
     <>
+    <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+       Blog
+      </h2>
       <section class="bg-white dark:bg-gray-900 rounded-xl my-8">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 class="mb-8 text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">

@@ -49,10 +49,10 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to={"/add-a-toys"}
+              to={"/toy-form"}
               className="text-xl"
             >
-              Add A Toys
+              Add A Toy
             </NavLink>
           </li>
         </>
@@ -107,7 +107,7 @@ const Navbar = () => {
               src={logo}
               alt="Toy Logo"
             />
-            <span className="md:text-3xl text-2xl md:w-44 w-40 uppercase font-bold">
+            <span className="md:text-3xl text-xl md:w-48 w-48 uppercase font-bold">
               Toy Car Zone
             </span>
           </div>

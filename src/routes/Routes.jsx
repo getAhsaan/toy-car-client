@@ -7,6 +7,7 @@ import Login from "../pages/login/Login";
 import Registration from "../pages/registration/Registration";
 import AllToys from "../pages/toys/allToys/AllToys";
 import SingleToys from "../pages/toys/singleToys/SingleToys";
+import ToyForm from "../pages/toyForm/ToyForm";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: "/single-toys",
         element: <SingleToys></SingleToys>,
       },
+      {
+        path: "/toy-form",
+        element: <ToyForm></ToyForm>
+      }
     ],
   },
 ]);
