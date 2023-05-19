@@ -28,19 +28,52 @@ const Blog = () => {
                   and where should we store them on the client-side?
                 </h3>
                 <div class="text-gray-500 dark:text-gray-400">
-                <p className="text-2xl"><span className="text-amber-600">Access Token:</span> An access token is a credential that represents the authorization granted to a user or client application to access specific resources or perform certain actions. It is usually a short-lived token with a limited lifespan. The access token is presented by the client application to the server or API it wishes to access to prove its identity and permissions. The server validates the token and allows or denies access based on its validity and the associated permissions. </p>
-                <br /> 
-                <p><span className="text-amber-600">Refresh Token:</span> A refresh token is a long-lived token used to obtain a new access token when the current access token expires. Unlike access tokens, refresh tokens are typically long-lasting and can be used to request new access tokens for an extended period. They are securely stored on the client-side and are used to maintain persistent authentication without requiring the user to repeatedly enter their credentials.</p>
-                <br />
-                <p className="font-bold">Here's a general flow of how access and refresh tokens work together:</p>
-    <br />
+                  <p className="text-2xl">
+                    <span className="text-amber-600">Access Token:</span> An
+                    access token is a credential that represents the
+                    authorization granted to a user or client application to
+                    access specific resources or perform certain actions. It is
+                    usually a short-lived token with a limited lifespan. The
+                    access token is presented by the client application to the
+                    server or API it wishes to access to prove its identity and
+                    permissions. The server validates the token and allows or
+                    denies access based on its validity and the associated
+                    permissions.{" "}
+                  </p>
+                  <br />
+                  <p>
+                    <span className="text-amber-600">Refresh Token:</span> A
+                    refresh token is a long-lived token used to obtain a new
+                    access token when the current access token expires. Unlike
+                    access tokens, refresh tokens are typically long-lasting and
+                    can be used to request new access tokens for an extended
+                    period. They are securely stored on the client-side and are
+                    used to maintain persistent authentication without requiring
+                    the user to repeatedly enter their credentials.
+                  </p>
+                  <br />
+                  <p className="font-bold">
+                    Here's a general flow of how access and refresh tokens work
+                    together:
+                  </p>
+                  <br />
 
+                  <p>
+                    <span className="text-amber-600">Authentication:</span> The
+                    user or client application provides valid credentials (such
+                    as username and password) to an authorization server.
+                  </p>
 
-<p><span className="text-amber-600">Authentication:</span> The user or client application provides valid credentials (such as username and password) to an authorization server.</p>
-
-<p><span className="text-amber-600">Token Issuance:</span> If the credentials are valid, the authorization server generates an access token and a refresh token.</p>
-<p><span className="text-amber-600">Access Token Usage:</span> The client application includes the access token in each request to the server or API it wants to access.</p>
-
+                  <p>
+                    <span className="text-amber-600">Token Issuance:</span> If
+                    the credentials are valid, the authorization server
+                    generates an access token and a refresh token.
+                  </p>
+                  <p>
+                    <span className="text-amber-600">Access Token Usage:</span>{" "}
+                    The client application includes the access token in each
+                    request to the server or API it wants to access.
+                  </p>
                 </div>
               </div>
               <div class="mb-10">
@@ -62,7 +95,20 @@ const Blog = () => {
                 <p class="text-gray-500 dark:text-gray-400">
                   Once you have purchased either the design, code, or both
                   packages, you will have access to all of the future updates
-                  based on the roadmap, free of charge. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt harum magni qui dolore fugit maiores nobis consectetur, ea repellendus voluptate? Atque odio consequuntur earum libero sequi saepe, enim, ut possimus nulla repudiandae iure? Quibusdam non ratione dignissimos, excepturi dolorem sint aut cumque magni! Magni doloribus voluptate, quisquam provident est porro ipsa id cupiditate consectetur ab at. Quam pariatur eaque quo perspiciatis a, porro quibusdam eligendi praesentium maiores recusandae quidem harum provident quaerat dolor libero cum? Dicta voluptate dolor nam eligendi sunt asperiores qui mollitia sed id dolorem quae esse dolores aliquid enim quia temporibus praesentium ipsa adipisci nemo, sapiente perspiciatis!
+                  based on the roadmap, free of charge. Lorem ipsum dolor sit
+                  amet consectetur, adipisicing elit. Sunt harum magni qui
+                  dolore fugit maiores nobis consectetur, ea repellendus
+                  voluptate? Atque odio consequuntur earum libero sequi saepe,
+                  enim, ut possimus nulla repudiandae iure? Quibusdam non
+                  ratione dignissimos, excepturi dolorem sint aut cumque magni!
+                  Magni doloribus voluptate, quisquam provident est porro ipsa
+                  id cupiditate consectetur ab at. Quam pariatur eaque quo
+                  perspiciatis a, porro quibusdam eligendi praesentium maiores
+                  recusandae quidem harum provident quaerat dolor libero cum?
+                  Dicta voluptate dolor nam eligendi sunt asperiores qui
+                  mollitia sed id dolorem quae esse dolores aliquid enim quia
+                  temporibus praesentium ipsa adipisci nemo, sapiente
+                  perspiciatis!
                 </p>
               </div>
             </div>
@@ -93,7 +139,24 @@ const Blog = () => {
                   </a>{" "}
                   that we have laid out for this project. It is also possible
                   that we will provide extra updates outside of the roadmap as
-                  well. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia quos ratione. Esse, dolor! Harum nihil eveniet hic beatae, suscipit excepturi accusamus dicta architecto cumque quod odio dolores dolorem porro eaque unde enim iure eum ipsam. Libero maxime commodi quo tenetur vel sapiente delectus eligendi exercitationem ea eveniet. Necessitatibus nesciunt, consequatur quaerat delectus error dicta molestias. Error dicta cum libero accusantium dolor pariatur vel in doloremque? Accusantium beatae explicabo pariatur provident voluptate quibusdam vero rem. Eos eaque consequuntur assumenda commodi dolores labore cum ducimus neque, obcaecati perspiciatis est architecto et veritatis ratione modi impedit laborum porro nostrum eius quisquam accusantium, esse vero atque ipsum! Omnis facilis consequatur doloribus. Quia porro alias laudantium in nesciunt. Minus corporis, officiis consequatur qui modi quis a harum accusamus aliquid? Eaque inventore cum pariatur nesciunt commodi earum quibusdam maxime nobis quis id sed optio
+                  well. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nam mollitia quos ratione. Esse, dolor! Harum nihil eveniet
+                  hic beatae, suscipit excepturi accusamus dicta architecto
+                  cumque quod odio dolores dolorem porro eaque unde enim iure
+                  eum ipsam. Libero maxime commodi quo tenetur vel sapiente
+                  delectus eligendi exercitationem ea eveniet. Necessitatibus
+                  nesciunt, consequatur quaerat delectus error dicta molestias.
+                  Error dicta cum libero accusantium dolor pariatur vel in
+                  doloremque? Accusantium beatae explicabo pariatur provident
+                  voluptate quibusdam vero rem. Eos eaque consequuntur assumenda
+                  commodi dolores labore cum ducimus neque, obcaecati
+                  perspiciatis est architecto et veritatis ratione modi impedit
+                  laborum porro nostrum eius quisquam accusantium, esse vero
+                  atque ipsum! Omnis facilis consequatur doloribus. Quia porro
+                  alias laudantium in nesciunt. Minus corporis, officiis
+                  consequatur qui modi quis a harum accusamus aliquid? Eaque
+                  inventore cum pariatur nesciunt commodi earum quibusdam maxime
+                  nobis quis id sed optio
                 </p>
               </div>
               <div class="mb-10">
@@ -126,7 +189,25 @@ const Blog = () => {
                 </p>
                 <p class="text-gray-500 dark:text-gray-400">
                   You can use this version for any purposes, because it is
-                  open-source under the MIT license. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio laboriosam inventore ex quia possimus consequatur veniam quidem quis architecto magnam assumenda debitis cum, temporibus dolorum? Vero, sequi delectus inventore doloribus eveniet et molestiae cum maxime at repellat excepturi ipsam! Eius exercitationem magnam impedit sunt illum autem quod optio tempora deleniti quasi, voluptatibus dolorem explicabo eaque excepturi et saepe temporibus iusto error nulla repellat totam sapiente magni itaque blanditiis! Nemo maxime non eaque officiis quam quisquam consequatur repellendus, vero nostrum neque dolor! Deserunt illum assumenda, doloribus accusantium iusto animi tempore dicta. Suscipit sapiente exercitationem dicta! Nulla ipsa excepturi corporis illum atque! Expedita error quae libero alias velit consequuntur minima! Exercitationem dignissimos impedit perferendis laboriosam magni sint quam dolore amet nesciunt saepe ad et itaque consequuntur, veniam non cupiditate ipsum quia molestiae nisi, dicta odit earum sed tenetur! Sapiente !
+                  open-source under the MIT license. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Aspernatur odio laboriosam
+                  inventore ex quia possimus consequatur veniam quidem quis
+                  architecto magnam assumenda debitis cum, temporibus dolorum?
+                  Vero, sequi delectus inventore doloribus eveniet et molestiae
+                  cum maxime at repellat excepturi ipsam! Eius exercitationem
+                  magnam impedit sunt illum autem quod optio tempora deleniti
+                  quasi, voluptatibus dolorem explicabo eaque excepturi et saepe
+                  temporibus iusto error nulla repellat totam sapiente magni
+                  itaque blanditiis! Nemo maxime non eaque officiis quam
+                  quisquam consequatur repellendus, vero nostrum neque dolor!
+                  Deserunt illum assumenda, doloribus accusantium iusto animi
+                  tempore dicta. Suscipit sapiente exercitationem dicta! Nulla
+                  ipsa excepturi corporis illum atque! Expedita error quae
+                  libero alias velit consequuntur minima! Exercitationem
+                  dignissimos impedit perferendis laboriosam magni sint quam
+                  dolore amet nesciunt saepe ad et itaque consequuntur, veniam
+                  non cupiditate ipsum quia molestiae nisi, dicta odit earum sed
+                  tenetur! Sapiente !
                 </p>
               </div>
             </div>

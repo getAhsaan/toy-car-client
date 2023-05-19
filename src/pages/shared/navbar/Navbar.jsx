@@ -31,28 +31,32 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/al-toys"}
+          to={"/all-toys"}
           className="text-xl"
         >
           All Toys
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to={"/my-toys"}
-          className="text-xl"
-        >
-          My Toys
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/add-a-toys"}
-          className="text-xl"
-        >
-          Add A Toys
-        </NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink
+              to={"/my-toys"}
+              className="text-xl"
+            >
+              My Toys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/add-a-toys"}
+              className="text-xl"
+            >
+              Add A Toys
+            </NavLink>
+          </li>
+        </>
+      )}
       <li>
         <NavLink
           to={"/blog"}
@@ -115,7 +119,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      {user ? (
+        {user ? (
           <>
             {user?.displayName && (
               <Tooltip
