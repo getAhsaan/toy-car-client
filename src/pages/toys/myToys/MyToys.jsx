@@ -8,8 +8,8 @@ const MyToys = () => {
         <thead>
         <tr>
         <th>No</th>
-        <th className='text-lg'>Toy Name</th>
-        <th className='text-lg'>Seller Name</th>
+        <th className='text-lg'>Toy Pic, Name & Rating</th>
+        <th className='text-lg'>Seller Name & Email</th>
         <th className='text-lg'>Sub-Category</th>
         <th className='text-lg'>Price</th>
         <th className='text-lg'>Quantity</th>
@@ -32,7 +32,7 @@ const MyToys = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="font-bold text-xl">Rating</div>
+                  <div className="font-bold text-xl">Toy Name</div>
                   <div className="text-2xl opacity-50">*****</div>
                 </div>
               </div>
@@ -47,7 +47,8 @@ const MyToys = () => {
             <td className="text-xl">sub category</td>
             <td className="text-2xl text-orange-300">price</td>
             <td className="text-2xl text-orange-300">quantity</td>
-            <td>description</td>
+            <td>{"description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint recusandae eum iure neque, quia officiis facere harum illo! Reprehenderit, earum?".slice(0, 20)}...
+            </td>
             <th>
               <button className="btn btn-outline btn-secondary mx-2 btn-sm">Edit</button>
               <button className="btn btn-outline btn-secondary mx-2 btn-sm">Delete</button>

@@ -1,11 +1,16 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const SingleToy = () => {
+  const { name, price, sellerEmail, sellerName, quantity, description } =
+    useLoaderData();
+
   return (
     <div>
       <div className="md:flex shadow-2xl shadow-slate-900 my-20 gap-8 items-center rounded-xl md:border-4">
         <div className="md:w-1/2 rounded p-2 m-2 border-4 md:border-none">
-          <img className="rounded-3xl md:h-[500px]"
+          <img
+            className="rounded-3xl md:h-[500px]"
             src="https://i.ibb.co/z5G6DNh/gabriel-vasiliu-ISF2j-8-X1r0-unsplash.jpg"
             alt=""
           />
@@ -15,28 +20,28 @@ const SingleToy = () => {
             <span className="dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Toy Name :
             </span>{" "}
-            Remote Control Bus / M-555
+            {name}
           </h3>
 
           <h3 className=" my-4 uppercase">
             <span className="dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Seller Name :
             </span>{" "}
-            Barek Bin Trump{" "}
+            {sellerName}
           </h3>
 
           <p className="my-4">
             <span className="uppercase text-sm  dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Seller Email :
             </span>{" "}
-            <span className=" text-xl">barekbintrump@gmail.com</span>
+            <span className=" text-xl">{sellerEmail}</span>
           </p>
 
           <p className="my-4">
             <span className="uppercase text-sm dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Price :
             </span>{" "}
-            <span className=" text-4xl text-orange-300 mx-4">$12</span>
+            <span className=" text-4xl text-orange-300 mx-4">${price}</span>
           </p>
 
           <div className="flex gap-4 items-center">
@@ -50,13 +55,13 @@ const SingleToy = () => {
             <span className="uppercase text-sm dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Quantity :
             </span>{" "}
-            <span className=" text-4xl text-orange-300 mx-4">18</span>
+            <span className=" text-4xl text-orange-300 mx-4">{quantity}</span>
           </p>
           <p className="my-4">
             <span className="uppercase text-sm dark:bg-slate-900 p-1 rounded-md border-b border-e">
               Description :
             </span>{" "}
-            <span className=" text-xl mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aperiam porro cumque vero provident repudiandae, cum voluptates nam dolor culpa ullam fugiat tenetur ut tempore modi dolorum beatae maiores? Recusandae voluptate nisi tempora veniam in expedita autem aut sit amet voluptas, odio omnis vel enim hic laborum dolore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque et facilis a amet..</span>
+            <span className=" text-xl mx-2">{description}</span>
           </p>
         </div>
       </div>
