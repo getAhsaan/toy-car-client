@@ -68,7 +68,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 h-28 mb-4">
+    <div className="navbar bg-base-100 h-28 mb-4 sticky top-0 z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <label

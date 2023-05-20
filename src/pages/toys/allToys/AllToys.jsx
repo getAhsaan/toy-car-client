@@ -12,12 +12,12 @@ const AllToys = () => {
     <thead>
       <tr>
         <th></th>
-        <th className='text-lg'>Name</th>
-        <th className='text-lg'>Job</th>
-        <th className='text-lg'>Favorite Color</th>
-        <th className='text-lg'>Favorite Color</th>
-        <th className='text-lg'>Favorite Color</th>
-        <th className='text-lg'>Favorite Color</th>
+        <th className='text-lg'>Seller Name</th>
+        <th className='text-lg'>Toy Name</th>
+        <th className='text-lg'>Sub-Category</th>
+        <th className='text-lg'>Price</th>
+        <th className='text-lg'>Quantity</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>

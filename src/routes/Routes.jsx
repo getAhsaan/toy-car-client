@@ -9,6 +9,7 @@ import AllToys from "../pages/toys/allToys/AllToys";
 import SingleToy from "../pages/toys/singleToy/SingleToy";
 import ToyForm from "../pages/toyForm/ToyForm";
 import MyToys from "../pages/toys/myToys/MyToys";
+import UpdateForm from "../pages/toyForm/UpdateForm";
 
 const router = createBrowserRouter([
   {
@@ -45,8 +46,12 @@ const router = createBrowserRouter([
         element: <ToyForm></ToyForm>,
       },
       {
+        path: "/update-form",
+        element: <UpdateForm></UpdateForm>,
+      },
+      {
         path: "/my-toys",
-        element: <MyToys></MyToys>
+        element: <MyToys></MyToys>,
       },
     ],
   },

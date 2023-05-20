@@ -8,15 +8,15 @@ const Blog = () => {
       </h2>
       <section class="bg-white dark:bg-gray-900 rounded-xl my-8">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h2 class="mb-8 text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-8 md:text-6xl text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Frequently asked questions
           </h2>
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-4xl font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
                   <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -43,46 +43,13 @@ const Blog = () => {
                     denies access based on its validity and the associated
                     permissions.{" "}
                   </p>
-                  <br />
-                  <p>
-                    <span className="text-amber-600">Refresh Token:</span> A
-                    refresh token is a long-lived token used to obtain a new
-                    access token when the current access token expires. Unlike
-                    access tokens, refresh tokens are typically long-lasting and
-                    can be used to request new access tokens for an extended
-                    period. They are securely stored on the client-side and are
-                    used to maintain persistent authentication without requiring
-                    the user to repeatedly enter their credentials.
-                  </p>
-                  <br />
-                  <p className="font-bold">
-                    Here's a general flow of how access and refresh tokens work
-                    together:
-                  </p>
-                  <br />
 
-                  <p>
-                    <span className="text-amber-600">Authentication:</span> The
-                    user or client application provides valid credentials (such
-                    as username and password) to an authorization server.
-                  </p>
-
-                  <p>
-                    <span className="text-amber-600">Token Issuance:</span> If
-                    the credentials are valid, the authorization server
-                    generates an access token and a refresh token.
-                  </p>
-                  <p>
-                    <span className="text-amber-600">Access Token Usage:</span>{" "}
-                    The client application includes the access token in each
-                    request to the server or API it wants to access.
-                  </p>
                 </div>
               </div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
                   <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +62,7 @@ const Blog = () => {
                   </svg>
                   Compare SQL and NoSQL databases?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p class="text-gray-500 dark:text-gray-400 text-2xl">
                   Once you have purchased either the design, code, or both
                   packages, you will have access to all of the future updates
                   based on the roadmap, free of charge. Lorem ipsum dolor sit
@@ -117,9 +84,9 @@ const Blog = () => {
             </div>
             <div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
                   <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,14 +99,8 @@ const Blog = () => {
                   </svg>
                   What is express js? What is Nest JS?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
-                  The free updates that will be provided is based on the{" "}
-                  <a
-                    href="#"
-                    class="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
-                  >
-                    roadmap
-                  </a>{" "}
+                <p class="text-gray-500 dark:text-gray-400 text-2xl">
+                  The free updates that will be provided is based on the 
                   that we have laid out for this project. It is also possible
                   that we will provide extra updates outside of the roadmap as
                   well. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -163,9 +124,9 @@ const Blog = () => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
                   <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -178,19 +139,7 @@ const Blog = () => {
                   </svg>
                   What is MongoDB aggregate and how does it work?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
-                  The{" "}
-                  <a
-                    href="#"
-                    class="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
-                  >
-                    free version
-                  </a>{" "}
-                  of Windster includes a minimal style guidelines, component
-                  variants, and a dashboard page with the mobile version
-                  alongside it.
-                </p>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p class="text-gray-500 dark:text-gray-400 text-2xl">
                   You can use this version for any purposes, because it is
                   open-source under the MIT license. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Aspernatur odio laboriosam

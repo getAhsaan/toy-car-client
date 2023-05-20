@@ -44,7 +44,7 @@ const ToyForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="md:flex justify-between gap-4">
           <div className="form-group uppercase md:w-1/2">
-            <label>Name:</label>
+            <label>Toy Name:</label>
             <input
              className="text-xl"
               type="text"
