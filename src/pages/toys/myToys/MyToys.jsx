@@ -1,99 +1,89 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useAuth } from "../../../hooks/hook";
+import { Link } from "react-router-dom";
 
 const MyToys = () => {
+  // get user
+  const { user } = useAuth();
+
+  const [myToys, setMyToys] = useState([]);
+
+  // load my toy car data
+  useEffect(() => {
+    fetch(`http://localhost:5000/my-toys?email=${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setMyToys(data));
+  }, [user]);
   return (
     <div className=" w-full">
       <table className="table w-full">
         {/* head */}
         <thead>
-        <tr>
-        <th>No</th>
-        <th className='text-lg'>Toy Pic, Name & Rating</th>
-        <th className='text-lg'>Seller Name & Email</th>
-        <th className='text-lg'>Sub-Category</th>
-        <th className='text-lg'>Price</th>
-        <th className='text-lg'>Quantity</th>
-        <th className='text-lg'>Description</th>
-        <th className="text-lg">Action</th>
-      </tr>
+          <tr>
+            <th>No</th>
+            <th className="text-lg">Toy Pic, Name & Rating</th>
+            <th className="text-lg">Seller Name & Email</th>
+            <th className="text-lg">Sub-Category</th>
+            <th className="text-lg">Price</th>
+            <th className="text-lg">Quantity</th>
+            <th className="text-lg">Description</th>
+            <th className="text-lg">Action</th>
+          </tr>
         </thead>
         <tbody>
           {/* row 1 */}
-          <tr className="my-8 border-t-2 border-slate-900">
-            <th className="text-xl">1</th>
-            <td>
-              <div className="flex items-center space-x-3">
-                <div className="">
-                  <div className="mask mask-squircle w-20 h-20">
-                    <img
-                      src="https://i.ibb.co/p2qNsX5/marc-grande-VGLBD77-CJ9-Q-unsplash.jpg"
-                      alt="Avatar Tailwind CSS Component"
-                    />
+          {myToys.map((toy, index) => (
+            <tr
+              key={toy._id}
+              className="my-8 border-t-2 border-slate-900"
+            >
+              <th className="text-xl">{index + 1}</th>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="">
+                    <div className="mask mask-squircle w-20 h-20">
+                      <img
+                        src={toy?.pictureUrl}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-xl">{toy?.name}</div>
+                    <div className="text-2xl opacity-50">*****</div>
                   </div>
                 </div>
-                <div>
-                  <div className="font-bold text-xl">Toy Name</div>
-                  <div className="text-2xl opacity-50">*****</div>
-                </div>
-              </div>
-            </td>
-            <td className="text-xl">
-              Zemlak, Daniel and Leannon
-              <br />
-              <span className="badge badge-ghost badge-lg">
-                example@example.com
-              </span>
-            </td>
-            <td className="text-xl">sub category</td>
-            <td className="text-2xl text-orange-300">price</td>
-            <td className="text-2xl text-orange-300">quantity</td>
-            <td>{"description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint recusandae eum iure neque, quia officiis facere harum illo! Reprehenderit, earum?".slice(0, 20)}...
-            </td>
-            <th>
-              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Edit</button>
-              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Delete</button>
-            </th>
-            
-          </tr>
-
-
-          {/* <tr className="my-8 border-t-2 border-slate-900">
-            <th>1</th>
-            <td>
-              <div className="flex items-center space-x-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-20 h-20">
-                    <img
-                      src="https://i.ibb.co/p2qNsX5/marc-grande-VGLBD77-CJ9-Q-unsplash.jpg"
-                      alt="Avatar Tailwind CSS Component"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">Hart Hagerty</div>
-                  <div className="text-sm opacity-50">United States</div>
-                </div>
-              </div>
-            </td>
-            <td>
-              Zemlak, Daniel and Leannon
-              <br />
-              <span className="badge badge-ghost badge-sm">
-                example@example.com
-              </span>
-            </td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <th>
-              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Edit</button>
-              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Delete</button>
-            </th>
-            
-          </tr>
-           */}
+              </td>
+              <td className="text-xl">
+                {toy?.sellerName}
+                <br />
+                <span className="badge badge-ghost badge-lg">
+                  {toy?.sellerEmail}
+                </span>
+              </td>
+              <td className="text-xl">{toy?.subcategory}</td>
+              <td className="text-2xl text-orange-300">${toy?.price}</td>
+              <td className="text-2xl text-orange-300">{toy?.quantity}</td>
+              <td>
+                {"description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint recusandae eum iure neque, quia officiis facere harum illo! Reprehenderit, earum?".slice(
+                  0,
+                  20
+                )}
+                ...
+              </td>
+              <th>
+                <Link
+                  to={`/update-form/${toy?._id}`}
+                  className="btn btn-outline btn-secondary mx-2 btn-sm"
+                >
+                  Edit
+                </Link>
+                <button className="btn btn-outline btn-secondary mx-2 btn-sm">
+                  Delete
+                </button>
+              </th>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

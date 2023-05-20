@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../toyForm/ToyForm.css"; // Import the CSS file for styling
 import { toast } from "react-toastify";
+import { useAuth } from "../../hooks/hook";
 
 const ToyForm = () => {
+  const { user } = useAuth();
+
   const [pictureURL, setPictureURL] = useState("");
   const [name, setName] = useState("");
-  const [sellerName, setSellerName] = useState("");
-  const [sellerEmail, setSellerEmail] = useState("");
+  const [sellerName, setSellerName] = useState(`${user?.displayName || ""}`);
   const [subcategory, setSubCategory] = useState("");
   const [price, setPrice] = useState("");
   const [rating, setRating] = useState("");
@@ -19,9 +21,9 @@ const ToyForm = () => {
       pictureURL,
       name,
       sellerName,
-      sellerEmail,
+      sellerEmail: user?.email,
       subcategory,
-      price,
+      price: parseFloat(price),
       rating,
       quantity,
       description,
@@ -82,7 +84,7 @@ const ToyForm = () => {
                 <input
                   className="text-xl"
                   type="text"
-                  value={sellerName}
+                  defaultValue={sellerName}
                   onChange={(e) => setSellerName(e.target.value)}
                 />
               </div>
@@ -93,8 +95,8 @@ const ToyForm = () => {
               <input
                 className="text-xl"
                 type="email"
-                value={sellerEmail}
-                onChange={(e) => setSellerEmail(e.target.value)}
+                value={user?.email}
+                readOnly
               />
             </div>
 
@@ -117,7 +119,7 @@ const ToyForm = () => {
                 <label>Price:</label>
                 <input
                   className="text-xl"
-                  type="number"
+                  type="text"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                 />
@@ -129,6 +131,8 @@ const ToyForm = () => {
                   type="number"
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
+                  min="1"
+                  max="5"
                 />
               </div>
             </div>
@@ -138,7 +142,7 @@ const ToyForm = () => {
                 <label>Picture URL of the toy:</label>
                 <input
                   className="text-xl"
-                  type="text"
+                  type="url"
                   value={pictureURL}
                   onChange={(e) => setPictureURL(e.target.value)}
                 />

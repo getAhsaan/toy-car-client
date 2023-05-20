@@ -2,30 +2,18 @@ import React, { useState } from "react";
 import "../toyForm/ToyForm.css"; // Import the CSS file for styling
 
 const UpdateForm = () => {
-  const [pictureURL, setPictureURL] = useState("");
-  const [name, setName] = useState("");
-  const [sellerName, setSellerName] = useState("");
-  const [sellerEmail, setSellerEmail] = useState("");
-  const [subCategory, setSubCategory] = useState("");
   const [price, setPrice] = useState("");
-  const [rating, setRating] = useState("");
   const [quantity, setQuantity] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to handle form submission (e.g., API call, form validation, etc.)
-    console.log({
-      pictureURL,
-      name,
-      sellerName,
-      sellerEmail,
-      subCategory,
+    const updateCarInfo = {
       price,
-      rating,
       quantity,
       description,
-    });
+    };
+    
   };
 
   return (
