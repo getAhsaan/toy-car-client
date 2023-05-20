@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleToys = () => {
+const SingleToy = () => {
   return (
     <div>
       <div className="md:flex shadow-2xl shadow-slate-900 my-20 gap-8 items-center rounded-xl md:border-4">
@@ -64,4 +64,4 @@ const SingleToys = () => {
   );
 };
 
-export default SingleToys;
+export default SingleToy;

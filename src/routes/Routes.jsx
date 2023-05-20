@@ -6,8 +6,9 @@ import ErrorPage from "../pages/home/error/ErrorPage";
 import Login from "../pages/login/Login";
 import Registration from "../pages/registration/Registration";
 import AllToys from "../pages/toys/allToys/AllToys";
-import SingleToys from "../pages/toys/singleToys/SingleToys";
+import SingleToy from "../pages/toys/singleToy/SingleToy";
 import ToyForm from "../pages/toyForm/ToyForm";
+import MyToys from "../pages/toys/myToys/MyToys";
 
 const router = createBrowserRouter([
   {
@@ -36,13 +37,17 @@ const router = createBrowserRouter([
         element: <AllToys></AllToys>,
       },
       {
-        path: "/single-toys",
-        element: <SingleToys></SingleToys>,
+        path: "/single-toy",
+        element: <SingleToy></SingleToy>,
       },
       {
         path: "/toy-form",
-        element: <ToyForm></ToyForm>
-      }
+        element: <ToyForm></ToyForm>,
+      },
+      {
+        path: "/my-toys",
+        element: <MyToys></MyToys>
+      },
     ],
   },
 ]);
