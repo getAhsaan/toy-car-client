@@ -2,33 +2,68 @@ import React from "react";
 
 const MyToys = () => {
   return (
-    <div className="overflow-x-auto w-full">
+    <div className=" w-full">
       <table className="table w-full">
         {/* head */}
         <thead>
         <tr>
-        <th></th>
+        <th>No</th>
         <th className='text-lg'>Toy Name</th>
         <th className='text-lg'>Seller Name</th>
         <th className='text-lg'>Sub-Category</th>
         <th className='text-lg'>Price</th>
         <th className='text-lg'>Quantity</th>
-        <th className='text-lg'>Rating</th>
         <th className='text-lg'>Description</th>
-        <th></th>
-        <th></th>
+        <th className="text-lg">Action</th>
       </tr>
         </thead>
         <tbody>
           {/* row 1 */}
-          <tr className="my-8 border-4">
+          <tr className="my-8 border-t-2 border-slate-900">
+            <th className="text-xl">1</th>
+            <td>
+              <div className="flex items-center space-x-3">
+                <div className="">
+                  <div className="mask mask-squircle w-20 h-20">
+                    <img
+                      src="https://i.ibb.co/p2qNsX5/marc-grande-VGLBD77-CJ9-Q-unsplash.jpg"
+                      alt="Avatar Tailwind CSS Component"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="font-bold text-xl">Rating</div>
+                  <div className="text-2xl opacity-50">*****</div>
+                </div>
+              </div>
+            </td>
+            <td className="text-xl">
+              Zemlak, Daniel and Leannon
+              <br />
+              <span className="badge badge-ghost badge-lg">
+                example@example.com
+              </span>
+            </td>
+            <td className="text-xl">sub category</td>
+            <td className="text-2xl text-orange-300">price</td>
+            <td className="text-2xl text-orange-300">quantity</td>
+            <td>description</td>
+            <th>
+              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Edit</button>
+              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Delete</button>
+            </th>
+            
+          </tr>
+
+
+          {/* <tr className="my-8 border-t-2 border-slate-900">
             <th>1</th>
             <td>
               <div className="flex items-center space-x-3">
                 <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
+                  <div className="mask mask-squircle w-20 h-20">
                     <img
-                      src="/tailwind-css-component-profile-2@56w.png"
+                      src="https://i.ibb.co/p2qNsX5/marc-grande-VGLBD77-CJ9-Q-unsplash.jpg"
                       alt="Avatar Tailwind CSS Component"
                     />
                   </div>
@@ -52,48 +87,12 @@ const MyToys = () => {
             <td>Purple</td>
             <td>Purple</td>
             <th>
-              <button className="btn btn-outline btn-secondary mx-2 btn-xs">Edit</button>
-              <button className="btn btn-outline btn-secondary mx-2 btn-xs">Delete</button>
+              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Edit</button>
+              <button className="btn btn-outline btn-secondary mx-2 btn-sm">Delete</button>
             </th>
             
           </tr>
-          <tr className="my-8 border-4">
-            <th>1</th>
-            <td>
-              <div className="flex items-center space-x-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img
-                      src="/tailwind-css-component-profile-2@56w.png"
-                      alt="Avatar Tailwind CSS Component"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">Hart Hagerty</div>
-                  <div className="text-sm opacity-50">United States</div>
-                </div>
-              </div>
-            </td>
-            <td>
-              Zemlak, Daniel and Leannon
-              <br />
-              <span className="badge badge-ghost badge-sm">
-                example@example.com
-              </span>
-            </td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <td>Purple</td>
-            <th>
-              <button className="btn btn-outline btn-secondary mx-2 btn-xs">Edit</button>
-              <button className="btn btn-outline btn-secondary mx-2 btn-xs">Delete</button>
-            </th>
-            
-          </tr>
-          
+           */}
         </tbody>
       </table>
     </div>
