@@ -1,9 +1,18 @@
+import { Rating } from "@smastrom/react-rating";
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const SingleToy = () => {
-  const { name, price, sellerEmail, sellerName, quantity, description } =
-    useLoaderData();
+  const {
+    name,
+    price,
+    sellerEmail,
+    sellerName,
+    quantity,
+    description,
+    rating,
+    pictureUrl,
+  } = useLoaderData();
 
   return (
     <div>
@@ -11,8 +20,8 @@ const SingleToy = () => {
         <div className="md:w-1/2 rounded p-2 m-2 border-4 md:border-none">
           <img
             className="rounded-3xl md:h-[500px]"
-            src="https://i.ibb.co/z5G6DNh/gabriel-vasiliu-ISF2j-8-X1r0-unsplash.jpg"
-            alt=""
+            src={pictureUrl}
+            alt={name}
           />
         </div>
         <div className="md:w-1/2 p-2 my-2">
@@ -48,7 +57,13 @@ const SingleToy = () => {
             <p className="dark:bg-slate-900 p-1 uppercase rounded-md border-b border-e">
               Rating :{" "}
             </p>
-            <p className="text-4xl">****</p>
+            <p className="text-4xl">
+              <Rating
+                value={rating}
+                readOnly
+                style={{ maxWidth: 130 }}
+              />
+            </p>
           </div>
 
           <p className="my-4">

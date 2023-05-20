@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./routes/Routes.jsx";
 import AuthProvider from "./context/AuthProvider";
 import { ToastContainer } from "react-toastify";
+import '@smastrom/react-rating/style.css'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="max-w-7xl mx-auto">
