@@ -8,7 +8,6 @@ const ErrorPage = () => {
   console.log(err);
   return (
     <>
-      <div className="md:h-screen md:w-screen m-2 flex items-center">
         <div className="container flex flex-col md:flex-row items-center justify-center bg-gray-900 p-8 text-gray-700 border-2 md:w-2/3  mx-auto">
           <div className="md:w-1/2 mx-auto">
             <div className="text-6xl md:text-9xl text-center font-dark font-bold text-white">
@@ -30,14 +29,14 @@ const ErrorPage = () => {
               </Link>
             </p>
           </div>
+          <div>
           <Player
-            className="md:h-96 md:w-96"
             autoplay
             loop
             src="https://assets9.lottiefiles.com/packages/lf20_cr9slsdh.json"
           ></Player>
+          </div>
         </div>
-      </div>
     </>
   );
 };

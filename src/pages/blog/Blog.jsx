@@ -2,13 +2,12 @@ import React from "react";
 import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const Blog = () => {
-
   // title
-  useDynamicTitle("| Blogs")
+  useDynamicTitle("| Blogs");
   return (
     <>
-    <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
-       Blog
+      <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+        Blog
       </h2>
       <section class="bg-white dark:bg-gray-900 rounded-xl my-8">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -35,19 +34,52 @@ const Blog = () => {
                   and where should we store them on the client-side?
                 </h3>
                 <div class="text-gray-500 dark:text-gray-400">
-                  <p className="text-2xl">
-                    <span className="text-amber-600">Access Token:</span> An
-                    access token is a credential that represents the
-                    authorization granted to a user or client application to
-                    access specific resources or perform certain actions. It is
-                    usually a short-lived token with a limited lifespan. The
-                    access token is presented by the client application to the
-                    server or API it wishes to access to prove its identity and
-                    permissions. The server validates the token and allows or
-                    denies access based on its validity and the associated
-                    permissions.{" "}
+                  <p>
+                    <span className="text-orange-300 font-bold text-2xl">
+                      Access Token :
+                    </span>{" "}
+                    <span className="text-2xl">
+                      An access token is like a pass that allows you to access
+                      specific resources or actions after you log in or
+                      authenticate. It doesn't last very long.
+                    </span>
                   </p>
-
+                  <p>
+                    <span className="text-orange-300 font-bold text-2xl">
+                      Refresh Token :
+                    </span>{" "}
+                    <span className="text-2xl">
+                      A refresh token is a special pass that is longer-lasting.
+                      It helps you get a new access token when the current one
+                      expires, so you don't have to keep logging in.
+                    </span>
+                  </p>
+                  <p>
+                    <span className="text-orange-300 font-bold text-2xl">
+                      How They Work :
+                    </span>{" "}
+                    <span className="text-2xl">
+                      Access tokens are given to you after you log in
+                      successfully. You use them to prove your identity and get
+                      access to things. When an access token expires, you can
+                      use the refresh token to get a new access token without
+                      logging in again.
+                    </span>
+                  </p>
+                  <p>
+                    <span className="text-orange-300 font-bold text-2xl">
+                      Where to Store Them on the Client-side :
+                    </span>{" "}
+                    <span className="text-2xl">
+                      To keep access tokens and refresh tokens safe on the
+                      client-side, you can store them in secure places like
+                      HTTP-only cookies or the browser's local storage. These
+                      methods have built-in protections to prevent others from
+                      accessing the tokens. It's important to follow security
+                      guidelines and use storage methods that keep your tokens
+                      secure.
+                    </span>
+                  </p>
                 </div>
               </div>
               <div class="mb-10">
@@ -66,23 +98,38 @@ const Blog = () => {
                   </svg>
                   Compare SQL and NoSQL databases?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400 text-2xl">
-                  Once you have purchased either the design, code, or both
-                  packages, you will have access to all of the future updates
-                  based on the roadmap, free of charge. Lorem ipsum dolor sit
-                  amet consectetur, adipisicing elit. Sunt harum magni qui
-                  dolore fugit maiores nobis consectetur, ea repellendus
-                  voluptate? Atque odio consequuntur earum libero sequi saepe,
-                  enim, ut possimus nulla repudiandae iure? Quibusdam non
-                  ratione dignissimos, excepturi dolorem sint aut cumque magni!
-                  Magni doloribus voluptate, quisquam provident est porro ipsa
-                  id cupiditate consectetur ab at. Quam pariatur eaque quo
-                  perspiciatis a, porro quibusdam eligendi praesentium maiores
-                  recusandae quidem harum provident quaerat dolor libero cum?
-                  Dicta voluptate dolor nam eligendi sunt asperiores qui
-                  mollitia sed id dolorem quae esse dolores aliquid enim quia
-                  temporibus praesentium ipsa adipisci nemo, sapiente
-                  perspiciatis!
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    SQL Databases :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    Relational Structure: SQL databases organize data into
+                    tables with predefined schemas. ACID Compliance: They
+                    provide strong data consistency and support ACID properties.
+                    Query Language: SQL databases use structured query language
+                    (SQL) for defining and manipulating data. Suitable for
+                    Complex Relationships: They are well-suited for applications
+                    with complex data relationships.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    NoSQL Databases :
+                  </span>{" "}
+                  <span className="text-2xl"> <br />
+                    Flexible Schema: NoSQL databases have a dynamic schema,
+                    allowing for storage of unstructured, semi-structured, and
+                    structured data without predefined schemas. <br /> Scalability and
+                    Distribution: They focus on horizontal scalability,
+                    distributed architectures, and high availability to handle
+                    large volumes of data and growing demands. <br /> Variety of Data
+                    Models: NoSQL databases offer flexible data models like
+                    key-value, document, columnar, and graph to handle diverse
+                    data types and relationships. <br /> Well-Suited for Big Data: They
+                    are commonly used in applications dealing with large volumes
+                    of unstructured or rapidly changing data, such as real-time
+                    analytics, content management systems, and IoT applications.
+                  </span>
                 </p>
               </div>
             </div>
@@ -103,28 +150,46 @@ const Blog = () => {
                   </svg>
                   What is express js? What is Nest JS?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400 text-2xl">
-                  The free updates that will be provided is based on the 
-                  that we have laid out for this project. It is also possible
-                  that we will provide extra updates outside of the roadmap as
-                  well. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nam mollitia quos ratione. Esse, dolor! Harum nihil eveniet
-                  hic beatae, suscipit excepturi accusamus dicta architecto
-                  cumque quod odio dolores dolorem porro eaque unde enim iure
-                  eum ipsam. Libero maxime commodi quo tenetur vel sapiente
-                  delectus eligendi exercitationem ea eveniet. Necessitatibus
-                  nesciunt, consequatur quaerat delectus error dicta molestias.
-                  Error dicta cum libero accusantium dolor pariatur vel in
-                  doloremque? Accusantium beatae explicabo pariatur provident
-                  voluptate quibusdam vero rem. Eos eaque consequuntur assumenda
-                  commodi dolores labore cum ducimus neque, obcaecati
-                  perspiciatis est architecto et veritatis ratione modi impedit
-                  laborum porro nostrum eius quisquam accusantium, esse vero
-                  atque ipsum! Omnis facilis consequatur doloribus. Quia porro
-                  alias laudantium in nesciunt. Minus corporis, officiis
-                  consequatur qui modi quis a harum accusamus aliquid? Eaque
-                  inventore cum pariatur nesciunt commodi earum quibusdam maxime
-                  nobis quis id sed optio
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    Express js :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    {" "}
+                    Express.js is a lightweight web application framework for
+                    Node.js. It simplifies server-side development by handling
+                    HTTP requests, routing, middleware, and responses. It is
+                    widely used for building APIs and web applications due to
+                    its simplicity and scalability.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    Next js :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    {" "}
+                    Next.js is a popular React framework for building
+                    server-side rendered and statically generated web
+                    applications. It provides features like automatic code
+                    splitting, static site generation, API routes, and CSS
+                    support. It enhances development experience and optimizes
+                    performance.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    Next.js offers several key features, including :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    {" "}
+                    <br />
+                    1. Automatic code splitting <br />
+                    2. Static site generation (SSG) <br />
+                    3. API routes <br />
+                    4. Hot module replacement (HMR) <br />
+                    5. Dynamic imports etc.
+                  </span>
                 </p>
               </div>
               <div class="mb-10">
@@ -143,27 +208,62 @@ const Blog = () => {
                   </svg>
                   What is MongoDB aggregate and how does it work?
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400 text-2xl">
-                  You can use this version for any purposes, because it is
-                  open-source under the MIT license. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Aspernatur odio laboriosam
-                  inventore ex quia possimus consequatur veniam quidem quis
-                  architecto magnam assumenda debitis cum, temporibus dolorum?
-                  Vero, sequi delectus inventore doloribus eveniet et molestiae
-                  cum maxime at repellat excepturi ipsam! Eius exercitationem
-                  magnam impedit sunt illum autem quod optio tempora deleniti
-                  quasi, voluptatibus dolorem explicabo eaque excepturi et saepe
-                  temporibus iusto error nulla repellat totam sapiente magni
-                  itaque blanditiis! Nemo maxime non eaque officiis quam
-                  quisquam consequatur repellendus, vero nostrum neque dolor!
-                  Deserunt illum assumenda, doloribus accusantium iusto animi
-                  tempore dicta. Suscipit sapiente exercitationem dicta! Nulla
-                  ipsa excepturi corporis illum atque! Expedita error quae
-                  libero alias velit consequuntur minima! Exercitationem
-                  dignissimos impedit perferendis laboriosam magni sint quam
-                  dolore amet nesciunt saepe ad et itaque consequuntur, veniam
-                  non cupiditate ipsum quia molestiae nisi, dicta odit earum sed
-                  tenetur! Sapiente !
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    MongoDB aggregate :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    MongoDB aggregation is a powerful method to process
+                    collections of documents using a pipeline. The pipeline
+                    consists of stages that can filter, sort, group, reshape,
+                    and modify the documents as they flow through it. Each stage
+                    in the pipeline performs a specific operation, allowing for
+                    efficient and flexible data processing.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-orange-300 font-bold text-2xl">
+                    How does it work :
+                  </span>
+                </p>
+                <p>
+                  <span className="text-white text-2xl">Pipeline Stages :</span>{" "}
+                  <span className="text-2xl">
+                    Each stage represents an operation, such as filtering,
+                    grouping, sorting, or reshaping the documents. Common stages
+                    include $match, $group, $sort, and $project.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-white text-2xl">Document Flow :</span>{" "}
+                  <span className="text-2xl">
+                    The input documents pass through the pipeline stages
+                    sequentially. Each stage takes the output of the previous
+                    stage as its input, enabling a series of transformations.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-white text-2xl">
+                    Data Transformation :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    TAt each stage, the specified operation is applied to the
+                    input documents, modifying or reshaping them. For example,
+                    $match filters documents based on conditions, while $group
+                    groups documents and performs aggregations.
+                  </span>
+                </p>
+                <p>
+                  <span className="text-white text-2xl">
+                    Document Processing :
+                  </span>{" "}
+                  <span className="text-2xl">
+                    {" "}
+                    Documents progress through the pipeline, undergoing
+                    transformations defined in each stage. The resulting
+                    documents from each stage become the input for the next
+                    stage, creating a flow of data processing.
+                  </span>
                 </p>
               </div>
             </div>
