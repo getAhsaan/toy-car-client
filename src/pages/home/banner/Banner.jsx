@@ -25,12 +25,10 @@ const Banner = () => {
               adventures. Start your engines and ignite the fun!
             </p>
             <Link to={"/all-toys"}>
-            <div className="inline-flex items-center justify-center w-full hover:text-white">
-              <hr className="w-64 h-1 my-8  border-0 rounded bg-orange-300" />
-              <div className="absolute px-4 -translate-x-1/2 dark:bg-slate-900  left-1/2 font-bold text-xl md:text-2xl rounded-lg p-2 border cursor-pointer">
+           
+              <div className=" px-4 - dark:bg-slate-900 md:w-1/3 mx-auto font-bold text-xl md:text-2xl rounded-lg p-2 border cursor-pointer">
                 Let's Explore
               </div>
-            </div>
             </Link>
           </div>
         </div>
