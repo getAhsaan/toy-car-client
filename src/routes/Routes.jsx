@@ -51,7 +51,6 @@ const router = createBrowserRouter([
       {
         path: "/update-form/:id",
         element: <UpdateForm></UpdateForm>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
       },
       {
         path: "/my-toys",

@@ -1,20 +1,73 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../toyForm/ToyForm.css"; // Import the CSS file for styling
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateForm = () => {
-  const [price, setPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [description, setDescription] = useState("");
+  const { id } = useParams();
+
+  const [loadedToy, setLoadedToy] = useState({});
+  const {
+    price: prevPrice,
+    description: prevDescription,
+    quantity: prevQuantity,
+  } = loadedToy;
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const form = e.target;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
     const updateCarInfo = {
       price,
       quantity,
       description,
     };
-    
+
+    // update toy
+    fetch(`http://localhost:5000/cars/${id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateCarInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
+          toast.success("Car Updated Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      })
+      .catch((err) => {
+        toast.error(`error ${err?.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/cars/${id}`)
+      .then((res) => res.json())
+      .then((data) => setLoadedToy(data));
+  }, []);
 
   return (
     <>
@@ -37,8 +90,8 @@ const UpdateForm = () => {
                 <input
                   className="text-xl"
                   type="number"
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
+                  defaultValue={prevPrice}
+                  name="price"
                 />
               </div>
               <div className="form-group uppercase md:w-1/2">
@@ -46,8 +99,8 @@ const UpdateForm = () => {
                 <input
                   className="text-xl"
                   type="number"
-                  value={quantity}
-                  onChange={(e) => setQuantity(e.target.value)}
+                  defaultValue={prevQuantity}
+                  name="quantity"
                 />
               </div>
             </div>
@@ -55,8 +108,8 @@ const UpdateForm = () => {
               <label>Detail Description:</label>
               <textarea
                 className="text-xl"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                defaultValue={prevDescription}
+                name="description"
               ></textarea>
             </div>
 
