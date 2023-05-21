@@ -105,10 +105,7 @@ const MyToys = () => {
               <td className="text-2xl text-orange-300">${toy?.price}</td>
               <td className="text-2xl text-orange-300">{toy?.quantity}</td>
               <td>
-                {"description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint recusandae eum iure neque, quia officiis facere harum illo! Reprehenderit, earum?".slice(
-                  0,
-                  20
-                )}
+                {toy?.description.slice(0, 20)}
                 ...
               </td>
               <th>

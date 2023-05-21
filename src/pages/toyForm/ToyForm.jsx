@@ -82,12 +82,15 @@ const ToyForm = () => {
           <form onSubmit={handleSubmit}>
             <div className="md:flex justify-between gap-4">
               <div className="form-group uppercase md:w-1/2">
-                <label>Toy Name:</label>
+                <label>
+                  Toy Name: <span className="text-red-500">*</span>
+                </label>
                 <input
                   className="text-xl"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </div>
 
@@ -128,12 +131,15 @@ const ToyForm = () => {
               </div>
 
               <div className="form-group uppercase md:w-1/3">
-                <label>Price:</label>
+                <label>
+                  Price: <span className="text-red-500">*</span>
+                </label>
                 <input
                   className="text-xl"
                   type="text"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
+                  required
                 />
               </div>
               <div className="form-group uppercase md:w-1/3">
@@ -161,12 +167,15 @@ const ToyForm = () => {
               </div>
 
               <div className="form-group uppercase md:w-1/2">
-                <label>Available Quantity:</label>
+                <label>
+                  Available Quantity: <span className="text-red-500">*</span>
+                </label>
                 <input
                   className="text-xl"
                   type="number"
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
+                  required
                 />
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SocialLoginBtn from "../../components/SocialLoginBtn";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/hook";
 import { toast } from "react-toastify";
 
@@ -10,13 +10,19 @@ const Login = () => {
 
   const { createNewUserWithGoogle, loginNewUser } = useAuth();
 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state?.from?.pathname || "/";
+
   // handle google sign in
   const handleGoogleSignIn = () => {
     setErr("");
     createNewUserWithGoogle()
-      .then((userCredential) => {
-        console.log(userCredential.user);
-        toast.success("login successful");
+      .then((result) => {
+        if (result.user) {
+          toast.success("login successful");
+          navigate(from, { replace: true });
+        }
       })
       .catch((err) => setErr(err.message));
   };
@@ -33,8 +39,10 @@ const Login = () => {
     if (email && password) {
       loginNewUser(email, password)
         .then((result) => {
-          console.log(result.user);
-          toast.success("login successful");
+          if (result.user) {
+            toast.success("login successful");
+            navigate(from, { replace: true });
+          }
         })
         .catch((err) => {
           setErr(err.message);
@@ -46,7 +54,11 @@ const Login = () => {
     <div className=" min-h-screen bg-base-200">
       <div className="hero-content flex flex-col-reverse md:flex-row">
         <div className="md:w-1/2 hidden md:block">
-          <img className=" rounded-xl" src="https://i.ibb.co/BfTrfJK/1000-F-578183960-h-ZAw6-KNLS41-XLFFby-H2tv-Mj-Lh65-AMkj-Q.jpg" alt="" />
+          <img
+            className=" rounded-xl"
+            src="https://i.ibb.co/BfTrfJK/1000-F-578183960-h-ZAw6-KNLS41-XLFFby-H2tv-Mj-Lh65-AMkj-Q.jpg"
+            alt=""
+          />
         </div>
         <div className="card w-full md:w-1/3 shadow-2xl bg-base-100">
           <div className="card-body">
