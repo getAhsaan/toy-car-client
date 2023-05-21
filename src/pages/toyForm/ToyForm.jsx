@@ -71,7 +71,7 @@ const ToyForm = () => {
 
   return (
     <>
-      <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-white text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         Add A Toy
       </h2>
       <div className="md:flex gap-8 space-y-4 md:space-y-4 items-center">
@@ -86,7 +86,7 @@ const ToyForm = () => {
           <form onSubmit={handleSubmit}>
             <div className="md:flex justify-between gap-4">
               <div className="form-group uppercase md:w-1/2">
-                <label>
+                <label className="text-white">
                   Toy Name: <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -99,7 +99,7 @@ const ToyForm = () => {
               </div>
 
               <div className="form-group uppercase md:w-1/2">
-                <label>Seller Name:</label>
+                <label className="text-white">Seller Name:</label>
                 <input
                   className="text-xl"
                   type="text"
@@ -110,7 +110,7 @@ const ToyForm = () => {
             </div>
 
             <div className="form-group uppercase">
-              <label>Seller Email:</label>
+              <label className="text-white">Seller Email:</label>
               <input
                 className="text-xl"
                 type="email"
@@ -121,7 +121,7 @@ const ToyForm = () => {
 
             <div className="md:flex justify-between gap-4 items-center">
               <div className="form-group uppercase md:w-1/3">
-                <label>Sub-category:</label>
+                <label className="text-white">Sub-category:</label>
                 <select
                   className="text-xl"
                   value={subcategory}
@@ -135,7 +135,7 @@ const ToyForm = () => {
               </div>
 
               <div className="form-group uppercase md:w-1/3">
-                <label>
+                <label className="text-white">
                   Price: <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -147,7 +147,7 @@ const ToyForm = () => {
                 />
               </div>
               <div className="form-group uppercase md:w-1/3">
-                <label>Rating:</label>
+                <label className="text-white">Rating:</label>
                 <input
                   className="text-xl"
                   type="number"
@@ -161,7 +161,7 @@ const ToyForm = () => {
 
             <div className="md:flex justify-between gap-4">
               <div className="form-group uppercase md:w-1/2">
-                <label>Picture URL of the toy:</label>
+                <label className="text-white">Picture URL of the toy:</label>
                 <input
                   className="text-xl"
                   type="url"
@@ -171,7 +171,7 @@ const ToyForm = () => {
               </div>
 
               <div className="form-group uppercase md:w-1/2">
-                <label>
+                <label className="text-white">
                   Available Quantity: <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -185,7 +185,7 @@ const ToyForm = () => {
             </div>
 
             <div className="form-group uppercase">
-              <label>Detail Description:</label>
+              <label className="text-white">Detail Description:</label>
               <textarea
                 className="text-xl"
                 value={description}

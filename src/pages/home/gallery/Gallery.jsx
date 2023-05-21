@@ -11,7 +11,7 @@ const Gallery = () => {
   console.log(gallery);
   return (
     <div className="mt-20">
-      <h2 className="md:text-5xl text-3xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-3xl text-center text-white font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         Toy Car Gallery
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">

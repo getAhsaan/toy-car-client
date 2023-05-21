@@ -99,7 +99,7 @@ const Navbar = () => {
         </div>
         <Link
           to={"/"}
-          className=" rounded-lg p-2 hover:dark:bg-gray-800"
+          className=" rounded-lg p-2"
         >
           <div className="flex items-center md:gap-4 gap-2">
             <img

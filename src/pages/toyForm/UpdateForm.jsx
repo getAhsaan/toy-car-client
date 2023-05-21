@@ -74,7 +74,7 @@ const UpdateForm = () => {
 
   return (
     <>
-      <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-3xl text-white my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         Update This Toy
       </h2>
       <div className="md:flex gap-8 space-y-4 md:space-y-4 items-center">
@@ -89,7 +89,7 @@ const UpdateForm = () => {
           <form onSubmit={handleSubmit}>
             <div className="md:flex justify-between gap-4 items-center">
               <div className="form-group uppercase md:w-1/2">
-                <label>Price:</label>
+                <label className="text-white">Price:</label>
                 <input
                   className="text-xl"
                   type="number"
@@ -98,7 +98,7 @@ const UpdateForm = () => {
                 />
               </div>
               <div className="form-group uppercase md:w-1/2">
-                <label>Quantity:</label>
+                <label className="text-white">Quantity:</label>
                 <input
                   className="text-xl"
                   type="number"
@@ -108,7 +108,7 @@ const UpdateForm = () => {
               </div>
             </div>
             <div className="form-group uppercase">
-              <label>Detail Description:</label>
+              <label className="text-white">Detail Description:</label>
               <textarea
                 className="text-xl"
                 defaultValue={prevDescription}
