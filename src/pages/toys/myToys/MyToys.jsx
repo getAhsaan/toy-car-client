@@ -1,12 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../../hooks/hook";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const MyToys = () => {
   // get user
   const { user } = useAuth();
 
   const [myToys, setMyToys] = useState([]);
+
+  // handle toy car delete
+  const handleToyCarDelete = (id) => {
+    if (confirm("are you sure to delete")) {
+      fetch(`http://localhost:5000/cars/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount) {
+            toast.success("Car Delete Successfully", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+
+            const rest = myToys.filter((toy) => toy._id !== id);
+            setMyToys(rest);
+          }
+        })
+        .catch((err) => {
+          toast.error(`error ${err?.message}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        });
+    }
+  };
 
   // load my toy car data
   useEffect(() => {
@@ -78,7 +118,10 @@ const MyToys = () => {
                 >
                   Edit
                 </Link>
-                <button className="btn btn-outline btn-secondary mx-2 btn-sm">
+                <button
+                  onClick={() => handleToyCarDelete(toy?._id)}
+                  className="btn btn-outline btn-secondary mx-2 btn-sm"
+                >
                   Delete
                 </button>
               </th>
