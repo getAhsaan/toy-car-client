@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Collection = () => {
   return (
-    <div className="my-12">
+    <div className="my-20">
       <p className="text-2xl text-center my-2">
         {" "}
         <span className="border p-1 rounded-md">Our Collection</span>{" "}

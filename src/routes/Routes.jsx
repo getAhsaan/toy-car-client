@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       {
         path: "/all-toys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/cars"),
+        loader: () =>
+          fetch("https://toy-car-zone-server-smoky.vercel.app/cars"),
       },
       {
         path: "/single-toy/:id",
@@ -47,7 +48,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cars/${params.id}`),
+          fetch(
+            `https://toy-car-zone-server-smoky.vercel.app/cars/${params.id}`
+          ),
       },
       {
         path: "/toy-form",

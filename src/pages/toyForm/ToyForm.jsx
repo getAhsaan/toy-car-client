@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "../toyForm/ToyForm.css"; // Import the CSS file for styling
 import { toast } from "react-toastify";
 import { useAuth } from "../../hooks/hook";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const ToyForm = () => {
   const { user } = useAuth();
 
-  const [pictureURL, setPictureURL] = useState("");
+  const [pictureUrl, setPictureUrl] = useState("");
   const [name, setName] = useState("");
   const [sellerName, setSellerName] = useState(`${user?.displayName || ""}`);
   const [subcategory, setSubCategory] = useState("");
@@ -15,10 +16,13 @@ const ToyForm = () => {
   const [quantity, setQuantity] = useState("");
   const [description, setDescription] = useState("");
 
+  // title
+  useDynamicTitle("| Add A Toy");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const car = {
-      pictureURL,
+      pictureUrl,
       name,
       sellerName,
       sellerEmail: user?.email,
@@ -29,7 +33,7 @@ const ToyForm = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/cars`, {
+    fetch(`https://toy-car-zone-server-smoky.vercel.app/cars`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -136,7 +140,7 @@ const ToyForm = () => {
                 </label>
                 <input
                   className="text-xl"
-                  type="text"
+                  type="number"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   required
@@ -161,8 +165,8 @@ const ToyForm = () => {
                 <input
                   className="text-xl"
                   type="url"
-                  value={pictureURL}
-                  onChange={(e) => setPictureURL(e.target.value)}
+                  value={pictureUrl}
+                  onChange={(e) => setPictureUrl(e.target.value)}
                 />
               </div>
 

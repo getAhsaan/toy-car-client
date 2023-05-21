@@ -1,6 +1,10 @@
 import React from "react";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const Blog = () => {
+
+  // title
+  useDynamicTitle("| Blogs")
   return (
     <>
     <h2 className="md:text-5xl text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">

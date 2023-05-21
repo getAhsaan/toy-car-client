@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import "../toyForm/ToyForm.css"; // Import the CSS file for styling
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import useDynamicTitle from "../../hooks/useDynamicTitle";
 
 const UpdateForm = () => {
   const { id } = useParams();
+  // title
+  useDynamicTitle("| Update Toy");
 
   const [loadedToy, setLoadedToy] = useState({});
   const {
@@ -27,7 +30,7 @@ const UpdateForm = () => {
     };
 
     // update toy
-    fetch(`http://localhost:5000/cars/${id}`, {
+    fetch(`https://toy-car-zone-server-smoky.vercel.app/cars/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -64,7 +67,7 @@ const UpdateForm = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cars/${id}`)
+    fetch(`https://toy-car-zone-server-smoky.vercel.app/cars/${id}`)
       .then((res) => res.json())
       .then((data) => setLoadedToy(data));
   }, []);

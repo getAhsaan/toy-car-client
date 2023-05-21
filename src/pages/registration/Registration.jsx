@@ -67,51 +67,51 @@ const Registration = () => {
             <form onSubmit={handleCreateUser}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name(optional)</span>
+                  <span className="label-text text-xl">Name(optional)</span>
                 </label>
                 <input
                   type="name"
                   placeholder="name"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="name"
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">
+                  <span className="label-text text-xl">
                     Email <sup className="text-secondary text-lg">*</sup>
                   </span>
                 </label>
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="email"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">
+                  <span className="label-text text-xl">
                     Password <sup className="text-secondary text-lg">*</sup>
                   </span>
                 </label>
                 <input
                   type="password"
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="password"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">PhotoUrl(optional)</span>
+                  <span className="label-text text-xl">PhotoUrl(optional)</span>
                 </label>
                 <input
                   type="text"
                   placeholder="photo url"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="photoUrl"
                 />
               </div>
@@ -124,7 +124,7 @@ const Registration = () => {
                 </button>
               </div>
               <div className="mt-6">
-                <p>
+                <p className="text-xl">
                   Already have an Account?
                   <Link
                     className="text-secondary"

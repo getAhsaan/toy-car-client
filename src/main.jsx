@@ -9,6 +9,11 @@ import AuthProvider from "./context/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import '@smastrom/react-rating/style.css'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div className="max-w-7xl mx-auto">
     <React.StrictMode>

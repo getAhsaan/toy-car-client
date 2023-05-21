@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../../../hooks/hook";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import useDynamicTitle from "../../../hooks/useDynamicTitle";
 
 const MyToys = () => {
   // get user
@@ -9,10 +10,13 @@ const MyToys = () => {
 
   const [myToys, setMyToys] = useState([]);
 
+  // title
+  useDynamicTitle("| My Toys");
+
   // handle toy car delete
   const handleToyCarDelete = (id) => {
     if (confirm("are you sure to delete")) {
-      fetch(`http://localhost:5000/cars/${id}`, {
+      fetch(`https://toy-car-zone-server-smoky.vercel.app/cars/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -48,14 +52,44 @@ const MyToys = () => {
     }
   };
 
+  // handle sorting
+  const handleSorting = (e) => {
+    const sortTo = e.target.value;
+
+    fetch(
+      `https://toy-car-zone-server-smoky.vercel.app/sort-car/${sortTo}?email=${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setMyToys(data);
+      });
+  };
+
   // load my toy car data
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toys?email=${user?.email}`)
+    fetch(
+      `https://toy-car-zone-server-smoky.vercel.app/my-toys?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [user]);
   return (
     <div className=" w-full">
+      <div className="w-full max-w-xs ml-auto my-4">
+        <select
+          className="select select-bordered w-full max-w-xs"
+          onChange={handleSorting}
+        >
+          <option
+            disabled
+            selected
+          >
+            Sort By Price
+          </option>
+          <option value="low">Low First</option>
+          <option value="high">High First</option>
+        </select>
+      </div>
       <table className="table w-full">
         {/* head */}
         <thead>
@@ -105,7 +139,7 @@ const MyToys = () => {
               <td className="text-2xl text-orange-300">${toy?.price}</td>
               <td className="text-2xl text-orange-300">{toy?.quantity}</td>
               <td>
-                {toy?.description.slice(0, 20)}
+                {toy?.description?.slice(0, 20)}
                 ...
               </td>
               <th>

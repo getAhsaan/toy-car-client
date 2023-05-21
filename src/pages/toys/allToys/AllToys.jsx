@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useDynamicTitle from "../../../hooks/useDynamicTitle";
 
 const AllToys = () => {
   const LoadedAllCars = useLoaderData();
   const [allCars, setAllCars] = useState(LoadedAllCars);
 
+  // title
+  useDynamicTitle("| All Toys");
+
   // search
   const handleSearch = (e) => {
     const searchText = e.target.value;
     if (searchText) {
-      fetch(`http://localhost:5000/search/${searchText}`)
+      fetch(`https://toy-car-zone-server-smoky.vercel.app/search/${searchText}`)
         .then((res) => res.json())
         .then((data) => {
           setAllCars(data);

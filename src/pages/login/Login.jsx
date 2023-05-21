@@ -68,24 +68,24 @@ const Login = () => {
             <form onSubmit={handleLogin}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-xl">Email <span className="text-secondary">*</span></span>
                 </label>
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="email"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-xl">Password <span className=" text-secondary">*</span></span>
                 </label>
                 <input
                   type="password"
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input input-bordered text-xl"
                   name="password"
                   required
                 />
@@ -99,7 +99,7 @@ const Login = () => {
                 </button>
               </div>
               <div className="mt-6">
-                <p>
+                <p className="text-xl">
                   Don't have and account?
                   <Link
                     className="text-secondary"
