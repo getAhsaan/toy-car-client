@@ -26,35 +26,35 @@ const SingleToy = () => {
         </div>
         <div className="md:w-1/2 p-2 my-2">
           <h3 className="text-2xl uppercase my-8 leading-10">
-            <span className="dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Toy Name :
             </span>{" "}
             {name}
           </h3>
 
           <h3 className=" my-4 uppercase">
-            <span className="dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Seller Name :
             </span>{" "}
             {sellerName}
           </h3>
 
           <p className="my-4">
-            <span className="uppercase text-sm  dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="uppercase text-sm  dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Seller Email :
             </span>{" "}
             <span className=" text-xl">{sellerEmail}</span>
           </p>
 
           <p className="my-4">
-            <span className="uppercase text-sm dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="uppercase text-sm dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Price :
             </span>{" "}
             <span className=" text-4xl text-orange-300 mx-4">${price}</span>
           </p>
 
           <div className="flex gap-4 items-center">
-            <p className="dark:bg-slate-900 text-white p-1 uppercase rounded-md border-b border-e">
+            <p className="dark:bg-slate-900 text-gray-500 p-1 uppercase rounded-md border-b border-e">
               Rating :{" "}
             </p>
             <p className="text-4xl">
@@ -67,13 +67,13 @@ const SingleToy = () => {
           </div>
 
           <p className="my-4">
-            <span className="uppercase text-sm dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="uppercase text-sm dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Quantity :
             </span>{" "}
             <span className=" text-4xl text-orange-300 mx-4">{quantity}</span>
           </p>
           <p className="my-4">
-            <span className="uppercase text-sm dark:bg-slate-900 text-white p-1 rounded-md border-b border-e">
+            <span className="uppercase text-sm dark:bg-slate-900 text-gray-500 p-1 rounded-md border-b border-e">
               Description :
             </span>{" "}
             <span className=" text-xl mx-2">{description}</span>

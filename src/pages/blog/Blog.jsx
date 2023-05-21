@@ -6,18 +6,18 @@ const Blog = () => {
   useDynamicTitle("| Blogs");
   return (
     <>
-      <h2 className="md:text-5xl text-white text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-gray-500 text-3xl my-8 text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         Blog
       </h2>
-      <section class="bg-white dark:bg-gray-900 rounded-xl my-8 text-white">
+      <section class="bg-white dark:bg-gray-900 rounded-xl my-8 text-gray-500">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h2 class="mb-8 md:text-6xl text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-8 md:text-6xl text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-500">
             Frequently asked questions
           </h2>
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-gray-500">
                   <svg
                     class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
@@ -33,7 +33,7 @@ const Blog = () => {
                   What is an access token and refresh token? How do they work
                   and where should we store them on the client-side?
                 </h3>
-                <div class="  text-white">
+                <div class="  text-gray-500">
                   <p>
                     <span className="text-orange-300 font-bold text-2xl">
                       Access Token :
@@ -83,7 +83,7 @@ const Blog = () => {
                 </div>
               </div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-gray-500">
                   <svg
                     class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
@@ -116,18 +116,21 @@ const Blog = () => {
                   <span className="text-orange-300 font-bold text-2xl">
                     NoSQL Databases :
                   </span>{" "}
-                  <span className="text-2xl"> <br />
+                  <span className="text-2xl">
+                    {" "}
+                    <br />
                     Flexible Schema: NoSQL databases have a dynamic schema,
                     allowing for storage of unstructured, semi-structured, and
-                    structured data without predefined schemas. <br /> Scalability and
-                    Distribution: They focus on horizontal scalability,
-                    distributed architectures, and high availability to handle
-                    large volumes of data and growing demands. <br /> Variety of Data
-                    Models: NoSQL databases offer flexible data models like
-                    key-value, document, columnar, and graph to handle diverse
-                    data types and relationships. <br /> Well-Suited for Big Data: They
-                    are commonly used in applications dealing with large volumes
-                    of unstructured or rapidly changing data, such as real-time
+                    structured data without predefined schemas. <br />{" "}
+                    Scalability and Distribution: They focus on horizontal
+                    scalability, distributed architectures, and high
+                    availability to handle large volumes of data and growing
+                    demands. <br /> Variety of Data Models: NoSQL databases
+                    offer flexible data models like key-value, document,
+                    columnar, and graph to handle diverse data types and
+                    relationships. <br /> Well-Suited for Big Data: They are
+                    commonly used in applications dealing with large volumes of
+                    unstructured or rapidly changing data, such as real-time
                     analytics, content management systems, and IoT applications.
                   </span>
                 </p>
@@ -135,7 +138,7 @@ const Blog = () => {
             </div>
             <div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-gray-500">
                   <svg
                     class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
@@ -193,7 +196,7 @@ const Blog = () => {
                 </p>
               </div>
               <div class="mb-10">
-                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-white">
+                <h3 class="flex items-center mb-4 md:text-4xl text-2xl font-medium text-gray-900 dark:text-gray-500">
                   <svg
                     class="flex-shrink-0 mr-2 w-12 h-12 text-gray-500 dark:text-gray-400"
                     fill="currentColor"
@@ -227,7 +230,9 @@ const Blog = () => {
                   </span>
                 </p>
                 <p>
-                  <span className="text-white text-2xl">Pipeline Stages :</span>{" "}
+                  <span className="text-gray-500 text-2xl">
+                    Pipeline Stages :
+                  </span>{" "}
                   <span className="text-2xl">
                     Each stage represents an operation, such as filtering,
                     grouping, sorting, or reshaping the documents. Common stages
@@ -235,7 +240,9 @@ const Blog = () => {
                   </span>
                 </p>
                 <p>
-                  <span className="text-white text-2xl">Document Flow :</span>{" "}
+                  <span className="text-gray-500 text-2xl">
+                    Document Flow :
+                  </span>{" "}
                   <span className="text-2xl">
                     The input documents pass through the pipeline stages
                     sequentially. Each stage takes the output of the previous
@@ -243,7 +250,7 @@ const Blog = () => {
                   </span>
                 </p>
                 <p>
-                  <span className="text-white text-2xl">
+                  <span className="text-gray-500 text-2xl">
                     Data Transformation :
                   </span>{" "}
                   <span className="text-2xl">
@@ -254,7 +261,7 @@ const Blog = () => {
                   </span>
                 </p>
                 <p>
-                  <span className="text-white text-2xl">
+                  <span className="text-gray-500 text-2xl">
                     Document Processing :
                   </span>{" "}
                   <span className="text-2xl">

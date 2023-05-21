@@ -1,6 +1,5 @@
 .react-tabs__tab--selected {
-   @apply dark:bg-slate-900 text-white
-  }
-  .react-tabs__tab {
-   
-  }
+  @apply dark:bg-slate-900 text-gray-500;
+}
+.react-tabs__tab {
+}

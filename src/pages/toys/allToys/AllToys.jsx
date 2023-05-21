@@ -24,7 +24,7 @@ const AllToys = () => {
   };
   return (
     <div>
-      <h2 className="md:text-5xl text-white text-3xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
+      <h2 className="md:text-5xl text-gray-500 text-3xl text-center font-bold dark:bg-slate-900 p-4 md:w-1/3 mx-auto rounded-lg">
         All Toys
       </h2>
       <div className="form-control ">

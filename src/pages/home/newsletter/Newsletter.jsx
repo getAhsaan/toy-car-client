@@ -10,7 +10,7 @@ const Newsletter = () => {
       <section className="bg-white dark:bg-gray-900 rounded-xl my-12">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 md:text-5xl text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 md:text-5xl text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-500">
               Sign up for our newsletter
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 md:text-2xl dark:text-gray-400">
@@ -41,7 +41,7 @@ const Newsletter = () => {
                     </svg>
                   </div>
                   <input
-                    className="block p-3 pl-10 w-full  text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block p-3 pl-10 w-full  text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-500 dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="Enter your email"
                     type="email"
                     id="email"
@@ -51,7 +51,7 @@ const Newsletter = () => {
                 <div>
                   <button
                     type="submit"
-                    className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 uppercase"
+                    className="py-3 px-5 w-full text-sm font-medium text-center text-gray-500 rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 uppercase"
                   >
                     Subscribe
                   </button>
